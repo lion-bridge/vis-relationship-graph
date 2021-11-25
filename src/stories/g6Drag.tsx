@@ -15,6 +15,7 @@ const tooltip = new G6.Tooltip({
   offsetX: 10,
   offsetY: 10,
   fixToNode: [1, 0.5],
+  trigger: 'click',
   // the types of items that allow the tooltip show up
   // 允许出现 tooltip 的 item 类型
   itemTypes: ["node", "edge"],
@@ -125,7 +126,25 @@ const Drag = ({ data }: Props) => {
     graph.on("node:mouseenter", (e) => highListNodes(graph, e.item!));
     graph.on("node:mouseleave", () => clearAllStats(graph));
     graph.on("canvas:click", () => clearAllStats(graph));
+
+    setActive(graph)
+
   };
+
+  const setActive = (graph: Graph) => {
+    graph.on('node:mouseenter', (e) => {
+      graph.setItemState(e.item!, 'active', true);
+    });
+    graph.on('node:mouseleave', (e) => {
+      graph.setItemState(e.item!, 'active', false);
+    });
+    graph.on('edge:mouseenter', (e) => {
+      graph.setItemState(e.item!, 'active', true);
+    });
+    graph.on('edge:mouseleave', (e) => {
+      graph.setItemState(e.item!, 'active', false);
+    });
+  }
 
   useEffect(() => {
     const _graph = init();
