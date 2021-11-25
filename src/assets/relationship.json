@@ -1,0 +1,112 @@
+{
+  "code": 200,
+  "message": "OK",
+  "count": 0,
+  "data": {
+    "nodes": [
+      {
+        "id": 12329013,
+        "label": ["Tel"],
+        "properties": {
+          "name": "18633302926"
+        }
+      },
+      {
+        "id": 12328935,
+        "label": ["Person", "内部员工", "客户社会关系人", "项目关联人"],
+        "properties": {
+          "DEPT_NAME": "数据产品组",
+          "USR_ID": 191209165680252,
+          "EMPLOYEE_ID": "1004109",
+          "c_no": "130229198911126640",
+          "EMPLOYEE_FUNCTION": "互联网中心",
+          "IS_BLACK_LIST": 1,
+          "name": "许晓倩",
+          "EMPLOYEE_QUIT_DTL": "",
+          "EMPLOYEE_STS": "正式员工"
+        }
+      },
+      {
+        "id": 12329087,
+        "label": ["Person", "紧急联系人"],
+        "properties": {
+          "name": "许庆武",
+          "EMERGENCY_PHONE": "15532502218"
+        }
+      },
+      {
+        "id": 99172657,
+        "label": ["Addr"],
+        "properties": {
+          "name": "北京市朝阳区崔各庄乡塑料三厂宿舍楼北楼202"
+        }
+      },
+      {
+        "id": 101097489,
+        "label": ["Person", "紧急联系人"],
+        "properties": {
+          "name": "许庆武          ",
+          "EMERGENCY_PHONE": "15532502218       "
+        }
+      },
+      {
+        "id": 12329544,
+        "label": ["Tel"],
+        "properties": {
+          "name": "15532502218"
+        }
+      },
+      {
+        "id": 101083396,
+        "label": ["Tel"],
+        "properties": {
+          "name": "15532502218       "
+        }
+      }
+    ],
+    "edges": [
+      {
+        "from": 12328935,
+        "to": 12329087,
+        "label": "父女",
+        "id": 776227284,
+        "properties": {}
+      },
+      {
+        "from": 12328935,
+        "to": 99172657,
+        "label": "住址",
+        "id": 810238240,
+        "properties": {}
+      },
+      {
+        "from": 12328935,
+        "to": 101097489,
+        "label": "员工紧急联系人",
+        "id": 795762215,
+        "properties": {}
+      },
+      {
+        "from": 12328935,
+        "to": 12329013,
+        "label": "电话",
+        "id": 137027250,
+        "properties": {}
+      },
+      {
+        "from": 12329087,
+        "to": 12329544,
+        "label": "电话",
+        "id": 137027361,
+        "properties": {}
+      },
+      {
+        "from": 101097489,
+        "to": 101083396,
+        "label": "电话",
+        "id": 810373731,
+        "properties": {}
+      }
+    ]
+  }
+}
