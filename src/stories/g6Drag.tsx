@@ -48,10 +48,22 @@ const Drag = ({ data }: Props) => {
           "activate-relations",
         ],
       },
+      layout: {
+        type: 'force',
+        linkDistance: 50,         // 可选，边长
+        nodeStrength: 30,         // 可选
+        edgeStrength: 0.1,        // 可选
+        collideStrength: 0.8,     // 可选
+        nodeSize: 30,             // 可选
+        alpha: 0.3,               // 可选
+        alphaDecay: 0.028,        // 可选
+        alphaMin: 0.01,           // 可选
+        forceSimulation: null,    // 可选
+      },
       plugins: [tooltip],
       defaultNode: {
         // 节点
-        type: "image",
+        // type: "image",
         size: [60, 60],
       },
       defaultEdge: {

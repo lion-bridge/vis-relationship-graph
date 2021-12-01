@@ -25,28 +25,48 @@ const data = {
       {
         id: "1",
         label: "电话",
-        x: 100,
-        y: 120,
+        icon: {
+          width:40,
+          height: 40,
+          img: require('../assets/images/phone.png')?.default,
+          show: true,
+        },
         img: require('../assets/images/phone.png')?.default,
       },
       {
         id: "2",
         label: '姓名',
-        x: 150,
-        y: 170,
+
         img: require('../assets/images/person.png')?.default,
       },
       {
         id: "3",
-        x: 220,
-        y: 270,
+
         type: 'circle',
         label: '住址'
       },
       {
         id: "4",
-        x: 300,
-        y: 370,
+        type: 'circle',
+        label: '门牌号：502'
+      },
+      {
+        id: "5",
+        type: 'circle',
+        label: '门牌号：502'
+      },
+      {
+        id: "6",
+        type: 'circle',
+        label: '门牌号：502'
+      },
+      {
+        id: "7",
+        type: 'circle',
+        label: '门牌号：502'
+      },
+      {
+        id: "8",
         type: 'circle',
         label: '门牌号：502'
       },
@@ -66,6 +86,18 @@ const data = {
         source: "3",
         target: "4",
         label: '详细地址'
+      },
+      {
+        source: "3",
+        target: "5",
+      },
+      {
+        source: "3",
+        target: "6",
+      },
+      {
+        source: "4",
+        target: "8",
       },
     ],
   } as DataType;
